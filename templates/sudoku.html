@@ -11,8 +11,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-        <link rel="stylesheet" href="style.css">
-        <script src="sudoku.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
         <div style="text-align: center">
@@ -26,13 +25,14 @@
                         <div class="_mode _flex-center">
                             <h3 class="animate__animated animate__infinite animate__heartBeat">Choose Mode</h3>
                         </div>
-                        <div class="_difficulty-buttons" style="display: inline-block; margin: auto; vertical-align: middle;">
-                            <p>Easy</p>
-                            <p>Medium</p>
-                            <p>Hard</p>
+                        <div class="_difficulty-buttons">
+                            <button type="button" class="btn btn-outline-success" onclick="location.href = './sudoku_game?diff=easy';">Easy</button><br><br>
+                            <button type="button" class="btn btn-outline-warning" onclick="location.href = './sudoku_game?diff=medium';">Medium</button><br><br>
+                            <button type="button" class="btn btn-outline-danger" onclick="location.href = './sudoku_game?diff=hard';">Hard</button><br><br>
                         </div>
                     </div>
                 </article>
+                <br>
             </div>
             <footer class="_flex-center">
                 <p>Made by Riccardo Serci</p>
